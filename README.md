@@ -157,7 +157,7 @@ A successful request returns:
 message=Order accepted, item_id=item-123, quantity=2
 ```
 
-![Successful gRPC request](screenshots/gRPC_success.png)
+![Successful gRPC request](screenshots/gRPC_Success.png)
 
 ### Unavailable gRPC Inventory
 
