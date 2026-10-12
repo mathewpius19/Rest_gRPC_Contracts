@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package inventory;
+
+service InventoryService {
+  rpc CheckInventory (InventoryRequest) returns (InventoryResponse);
+}
+
+service OrderService {
+  rpc PlaceOrder (InventoryRequest) returns (OrderResponse);
+}
+
+message InventoryRequest {
+  string item_id = 1;
+  int32 quantity = 2;
+}
+
+message InventoryResponse {
+  bool available = 1;
+  int32 remaining_quantity = 2;
+}
+
+message OrderResponse {
+  string message = 1;
+  string item_id = 2;
+  int32 quantity = 3;
+}
